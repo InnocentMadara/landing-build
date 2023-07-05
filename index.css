@@ -344,7 +344,7 @@
   font-family: "Inter";
   font-weight: 300;
   padding: 125px 0 140px;
-  max-width: 1760px;
+  max-width: min(1760px,100vw);
 }
 
 .clients__text-block {
