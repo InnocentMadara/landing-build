@@ -3304,7 +3304,7 @@ body.services-page .service {
   min-height: 720px;
 }
 
-body.services-page .service img {
+body.services-page .service .service__image-block img {
   height: 720px;
 }
 
@@ -3396,6 +3396,8 @@ body.services-page .service img {
 .service__button {
   width: 290px;
   height: 80px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .service__button img {
@@ -4693,7 +4695,7 @@ ol p {
     min-height: 600px;
   }
 
-  body.services-page .service img {
+  body.services-page .service .service__image-block img {
     height: 600px;
   }
 
@@ -5150,6 +5152,10 @@ ol p {
     border: 0 !important;
     width: auto;
     height: auto;
+  }
+
+  .service__button::after {
+    display: none;
   }
 
   .service__button img {
