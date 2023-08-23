@@ -2591,6 +2591,23 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   width: 100%;
   max-width: 1760px;
   padding: 10px 0 10px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #f5f5f5;
+}
+
+.header::before {
+  content: "";
+  left: 50%;
+  width: calc(100vw - var(--scrollbar-width));
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #f5f5f5;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
 }
 
 .header__button {
@@ -3287,6 +3304,7 @@ body.contact-page .contact-page::before {
   width: 100%;
   font-family: "Inter";
   color: #181818;
+  margin-top: 160px;
   margin-bottom: 125px;
 }
 
@@ -3322,7 +3340,7 @@ body.contact-page .contact-page::before {
   letter-spacing: -0.02em;
   position: sticky;
   margin-bottom: 40px;
-  top: 15px;
+  top: 65px;
 }
 
 .about-us__text {
@@ -3858,12 +3876,13 @@ body.home-page .clients__client {
 
 .contacts__text {
   font-family: "Inter";
-  font-size: 20px;
+  font-size: 32px;
   margin-bottom: 10px;
+  font-weight: 300;
 }
 
 .contacts__link {
-  font-size: calc(15px + 1.5625vw);
+  font-size: 24px;
   font-family: "Inter";
   font-weight: 400;
   color: #000;
@@ -3894,7 +3913,7 @@ body.home-page .clients__client {
           flex-direction: column;
   position: sticky;
   row-gap: 23px;
-  top: 0;
+  top: 50px;
 }
 
 .gallery__category {
@@ -4254,7 +4273,7 @@ body.about-page .facts {
 }
 
 body.about-page .facts__bg {
-  background-image: url(https://picsum.photos/1920/1080);
+  background-image: url(images/About/mid-bg.jpg);
   background-size: cover;
   background-attachment: fixed;
   width: 100vw;
@@ -5225,6 +5244,7 @@ ol p {
   }
 
   .about-us {
+    margin-top: 60px;
     margin-bottom: 60px;
   }
 
@@ -5498,8 +5518,12 @@ ol p {
 }
 
 @media (max-width: 750px) {
+  .contacts__text {
+    font-size: 26px;
+  }
+
   .contacts__link {
-    font-size: calc(30px + 51*(100vw - 320px)/1920);
+    font-size: 20px;
   }
 }
 
@@ -5610,11 +5634,5 @@ ol p {
 
   .form__send-button {
     width: min(280px,100vw - 60px);
-  }
-}
-
-@media (max-width: 374px) {
-  .contacts__link {
-    font-size: 26px;
   }
 }
